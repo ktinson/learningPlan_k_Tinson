@@ -1,6 +1,7 @@
 # learningPlan_k_Tinson
 Repository for all the code created week 9 and 10
-
+Monikai Tinson Entropy
+https://docs.python.org/3/library/functions.html#print
 
 #With your coach and manager, select the languages, frameworks/libraries, databases, and/or cloud/deployment/tooling learning plans that you plan to complete before starting your job.
 

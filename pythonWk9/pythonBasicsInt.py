@@ -12,7 +12,6 @@ print(f"{num1} + {num2} = {str(difference)}")
 print(num1 + " / " + num2 + " = " + str(result))
 print(f"{num1} + {num2} = {str(result)} fstring")
 print(f"{num1} + {num2} = {str(whole_result)} whole result no remainder fstring")
-
 floatinRes = float(result)
 print(num1 + " / " + num2 + " = " + str(floatinRes))
 print(f"{num1} + {num2} = {str(floatinRes)} fstring")
