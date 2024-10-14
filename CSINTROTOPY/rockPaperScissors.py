@@ -9,10 +9,6 @@ def main():
    else:
         print(f'player1: {player1} vs player2: {player2} = player 1 wins')
 
-
-
 def randomChoice():
     return random.choice(['rock', 'paper', 'scissors'])
-
-
 main()
