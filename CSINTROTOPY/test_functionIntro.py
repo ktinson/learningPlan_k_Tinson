@@ -1,8 +1,13 @@
 import pytest
 from newTestForPrctIntro import square
+from functionIntro import hello
 def main():
     test_squared()#without pytest
     test_square()#with pytest
+    # hello()
+def test_hello():
+     assert hello("Monikai") == "Hello, Monikai"
+     assert hello() == "Hello, world"
 def test_square():
     assert square(2) == 4
     assert square(3) == 9
