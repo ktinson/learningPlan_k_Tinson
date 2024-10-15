@@ -1,4 +1,5 @@
-Dog, House
-Cat, Apartment
-Wolf, Forest
-Snake, desert
+petType,environment,food
+Dog, House, kibble
+Cat, Apartment, fish
+Wolf, Forest, meat
+Snake, desert, rodents
