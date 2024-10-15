@@ -1,5 +1,12 @@
 #sys.argv list that can be created with the prompt
 import sys
+import cowsay
+if len(sys.argv) == 2:
+   cowsay.cow("Hello,", sys.argv[1])
+   #cowsay.trex("Hello", sys.argv[1])
+else:
+   print("Error")
+
 try:
     if len(sys.argv) < 2:
      print("not enough args")
