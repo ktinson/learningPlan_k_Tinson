@@ -1,4 +1,10 @@
+import csv
+
 pets = []
+with open("names.csv") as filename:
+    reader = csv.reader(filename)
+    for petType, environment in reader:
+        pets.append({"petType": petType, "environment": environment })
 with open("names.csv" ) as filename:
     for line in filename:
         row = line.rstrip().split(",")
@@ -9,5 +15,5 @@ with open("names.csv") as filename:
         pet = {"petType": petType, "environment": environment }
         pets.append(pet)
 for pet in sorted(pets, key=lambda pet: pet["petType"]):
-    print(f'{pet['petType']} is in the {pet['environment']}')
+    print(f'{pet['petType']} is in the{pet['environment']}')
         
