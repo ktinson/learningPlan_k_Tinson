@@ -1,5 +1,9 @@
 class Person:
-    ...
+    def __init__(self, name, position):
+        if not name:
+            raise ValueError("Input missing")
+        self.name = name
+        self.position = position
 def main():
     name = get_name()
     position = get_position()
@@ -11,10 +15,12 @@ def main():
     print(f'{person[0]} and {person[1]}')
     print(f"{personD['nameD']} and {personD['positionD']}")
 def get_perClass():
-    personC = Person()
-    personC.name = input("Name:")
-    personC.position = input("Position: ")
-    return personC
+    name = input("Name:")
+    position = input("Position: ")
+    try:
+        return Person(name, position)
+    except ValueError:
+        get_perClass()
 
 def get_perDict():
     nameD = input("Name: ")
