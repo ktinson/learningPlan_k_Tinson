@@ -1,6 +1,7 @@
 def main():
     name =input("Enter name: ")
     hello(name)
+    squared(3)
 def squared(n):
     return n * n
 def hello(to):
