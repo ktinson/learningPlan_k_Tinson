@@ -1,6 +1,7 @@
 pets = ["dog", "cat", "shark", "unicorn", "cactus"] #list
 enviroments = ["water", "forest", "town", "desert", "wherever"]
 theyLive = zip(pets, enviroments)
+print(set(theyLive))
 for pet in pets:
     print(f'{pet}\n', end ="")
     print("Pet: " + pet)
@@ -15,4 +16,3 @@ shoes = {
 print(f'where do you wear flipflops: {shoes["flipflops"]}')
 for shoe in shoes:
     print(shoe, shoes[shoe], sep=", ")
-print(set(theyLive))
