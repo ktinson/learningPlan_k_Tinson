@@ -4,6 +4,8 @@ class Person:
             raise ValueError("Input missing")
         self.name = name
         self.position = position
+    def __str__(self):
+        return f"I'm a person and my name is {self.name} and my position is {self.position}"
 def main():
     name = get_name()
     position = get_position()
@@ -11,6 +13,7 @@ def main():
     personD = get_perDict()
     personC = get_perClass()
     print(f'This is using a class: {personC.name} and they are {personC.position}')
+    print(personC)
     print(f'{name} and {position}') 
     print(f'{person[0]} and {person[1]}')
     print(f"{personD['nameD']} and {personD['positionD']}")
