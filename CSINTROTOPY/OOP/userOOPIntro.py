@@ -21,17 +21,17 @@ class Person:
                 return "🌪️"
 
 def main():
-    name = get_name()
+    name = get_name()#created specific functions 
     position = get_position()
     person = get_person()
-    personD = get_perDict()
-    personC = get_perClass()
+    personD = get_perDict()#assigned these variable to a dictionary object in implementation
+    personC = get_perClass()#used a class to define a person and create person objects
     print(f'This is using a class: {personC.name} and they are {personC.position}')
-    print(personC)
-    print(personC.workout())
-    print(f'{name} and {position}') 
-    print(f'{person[0]} and {person[1]}')
-    print(f"{personD['nameD']} and {personD['positionD']}")
+    print(personC)#using __str__ to define object as a string using the PErson class
+    print(personC.workout())#prompts user for fitness level using the Person Class workout method using the 
+    print(f'{name} and {position}') #using the functions
+    print(f'{person[0]} and {person[1]}')#using person function
+    print(f"{personD['nameD']} and {personD['positionD']}")#using the Dict
 def get_perClass():
     name = input("Name:")
     position = input("Position: ")
