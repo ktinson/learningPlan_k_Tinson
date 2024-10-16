@@ -8,6 +8,7 @@ from .models import User, Search
 class UserView(generics.CreateAPIView):
     queryset = User.objects.all
     serializer_class = UserSerializer
+    
 class SearchView(generics.CreateAPIView):
     queryset = Search.objects.all
     serializer_class = SearchSerializer
