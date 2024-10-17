@@ -8,3 +8,4 @@ class SearchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Search
         fields ='__all__'
+#
