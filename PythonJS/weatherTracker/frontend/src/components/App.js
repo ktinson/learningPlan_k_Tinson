@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import ReactDOM from 'react-dom'; 
+import ReactDOM from 'react-dom/client'; 
 export default class App extends Component{
     constructor(props){ 
         super(props)

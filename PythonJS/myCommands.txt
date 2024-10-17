@@ -1,0 +1,12 @@
+    1  source venv/bin/activate
+    2  cd PythonJS/
+    3  source venv/bin/activate
+    4  source .venv/bin/activate
+    5  python -m venv venv
+    6  python -m venv .venv
+    7  source .venv/bin/activate
+    8  source .venv/Scripts/activate
+    9  history > myCommands.txt
+   10  ls
+   11  deactivate
+   12  history > myCommands.txt
