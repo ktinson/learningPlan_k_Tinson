@@ -9,6 +9,8 @@ djangorestframework = "*"
 django-cors-headers = "*"
 axios = "*"
 pillow = "*"
+nodejs = "*"
+npm = "*"
 
 [dev-packages]
 
