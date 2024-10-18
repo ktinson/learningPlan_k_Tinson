@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      viewLarge: false,
+      viewLarge: true,
       cardList: [],
       modal: false,
       activeItem: {
