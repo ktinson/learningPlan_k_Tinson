@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Modal from "./components/Modal";
-import {Button, CardActions, Typography, CardContent, CardMedia, Card, Box} from '@mui/material/';
+import {Button, CardActions, Typography, CardContent, CardMedia, Card, Grid} from '@mui/material/';
 
 import axios from "axios";
 
@@ -100,19 +100,11 @@ class App extends Component {
       (item) => item.large === viewLarge
     );
 
-    return( <Box
-      sx={{
-        display: 'grid',
-        columnGap: 3,
-        rowGap: 3,
-        gridTemplateColumns: 'auto',
-        gridTemplateRows: 'auto'
-      }}
-    > {newItems.map((item) => {
+    return( <Grid container spacing={3}> {newItems.map((item) => {
       return(
         <>
-        <div ></div>
-        <Card sx={{ maxWidth: 345 }}>
+        <Grid size={8} style={{padding: "25px"}}>
+        <Card sx={{ width: 290 }}>
       <CardMedia
         sx={{ height: 345 }}
         image={item.image}
@@ -141,8 +133,9 @@ class App extends Component {
           </Button>
       </CardActions>
     </Card>
+    </Grid>
       </>)
-  })}</Box>);
+  })}</Grid>);
   };
 
   render() {
@@ -156,7 +149,7 @@ class App extends Component {
                 </Button>
               </div>
               {this.renderTabList()}
-              <div>
+              <div style={{padding: "50px"}}>
                 {this.renderItems()}
                 </div>
             
