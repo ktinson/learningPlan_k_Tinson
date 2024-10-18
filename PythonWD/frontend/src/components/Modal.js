@@ -69,7 +69,7 @@ export default class CustomModal extends Component {
                   checked={this.state.activeItem.large}
                   onChange={this.handleChange}
                 />
-                Completed
+                Large
               </Label>
             </FormGroup>
           </Form>

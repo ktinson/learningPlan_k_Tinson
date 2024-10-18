@@ -6,7 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      viewCompleted: false,
+      viewLarge: false,
       cardList: [],
       modal: false,
       activeItem: {
@@ -65,37 +65,37 @@ class App extends Component {
     this.setState({ activeItem: item, modal: !this.state.modal });
   };
 
-  displayCompleted = (status) => {
+  displayLarge = (status) => {
     if (status) {
-      return this.setState({ viewCompleted: true });
+      return this.setState({ viewLarge: true });
     }
 
-    return this.setState({ viewCompleted: false });
+    return this.setState({ viewLarge: false });
   };
 
   renderTabList = () => {
     return (
       <div className="nav nav-tabs">
         <span
-          onClick={() => this.displayCompleted(true)}
-          className={this.state.viewCompleted ? "nav-link active" : "nav-link"}
+          onClick={() => this.displayLarge(true)}
+          className={this.state.viewLarge ? "nav-link active" : "nav-link"}
         >
-          Complete
+          Large Cards
         </span>
         <span
-          onClick={() => this.displayCompleted(false)}
-          className={this.state.viewCompleted ? "nav-link" : "nav-link active"}
+          onClick={() => this.displayLarge(false)}
+          className={this.state.viewLarge ? "nav-link" : "nav-link active"}
         >
-          Incomplete
+          Small Cards
         </span>
       </div>
     );
   };
 
   renderItems = () => {
-    const { viewCompleted } = this.state;
+    const { viewLarge } = this.state;
     const newItems = this.state.cardList.filter(
-      (item) => item.large === viewCompleted
+      (item) => item.large === viewLarge
     );
 
     return newItems.map((item) => (
@@ -105,7 +105,7 @@ class App extends Component {
       >
         <span
           className={`card-name mr-2 ${
-            this.state.viewCompleted ? "completed-card" : ""
+            this.state.viewLarge ? "Large-card" : ""
           }`}
           description={item.description}
         >
