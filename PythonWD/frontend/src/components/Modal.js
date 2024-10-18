@@ -61,6 +61,17 @@ export default class CustomModal extends Component {
                 placeholder="Enter Card description"
               />
             </FormGroup>
+            <FormGroup>
+              <Label for="card-image">Image</Label>
+              <Input
+                type="text"
+                id="card-image"
+                name="image"
+                value={this.state.activeItem.image}
+                onChange={this.handleChange}
+                placeholder="Enter Card Image URL"
+              />
+            </FormGroup>
             <FormGroup check>
               <Label check>
                 <Input

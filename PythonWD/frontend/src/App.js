@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Modal from "./components/Modal";
+import {Button, CardActions, Typography, CardContent, CardMedia, Card, Box} from '@mui/material/';
+
 import axios from "axios";
 
 class App extends Component {
@@ -98,58 +100,66 @@ class App extends Component {
       (item) => item.large === viewLarge
     );
 
-    return newItems.map((item) => (
-      <li
-        key={item.id}
-        className="list-group-item d-flex justify-content-between align-items-center"
-      >
-        <span
-          className={`card-name mr-2 ${
-            this.state.viewLarge ? "Large-card" : ""
-          }`}
-          description={item.description}
-        >
-          {item.name}
-        </span>
-        <span>
-          <button
+    return( <Box
+      sx={{
+        display: 'grid',
+        columnGap: 3,
+        rowGap: 3,
+        gridTemplateColumns: 'auto',
+        gridTemplateRows: 'auto'
+      }}
+    > {newItems.map((item) => {
+      return(
+        <>
+        <div ></div>
+        <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 345 }}
+        image={item.image}
+        title="card image"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          <h1>{item.name}</h1>
+        </Typography>
+        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          <p>{item.description}</p>
+        </Typography>
+      </CardContent>
+      <CardActions>
+      <Button
             className="btn btn-secondary mr-2"
             onClick={() => this.editItem(item)}
           >
             Edit
-          </button>
-          <button
+          </Button>
+          <Button
             className="btn btn-danger"
             onClick={() => this.handleDelete(item)}
           >
             Delete
-          </button>
-        </span>
-      </li>
-    ));
+          </Button>
+      </CardActions>
+    </Card>
+      </>)
+  })}</Box>);
   };
 
   render() {
     return (
       <main className="container">
-        <h1 className="text-white text-uppercase text-center my-4">Card app</h1>
-        <div className="row">
-          <div className="col-md-6 col-sm-10 mx-auto p-0">
-            <div className="card p-3">
+        <h1 className="text-Black text-uppercase text-center my-4">Card app</h1>
+        <div className="">
               <div className="mb-4">
-                <button
-                  className="btn btn-primary"
-                  onClick={this.createItem}
-                >
+                <Button className="btn btn-primary" onClick={this.createItem}>
                   Add Card
-                </button>
+                </Button>
               </div>
               {this.renderTabList()}
-              <ul className="list-group list-group-flush border-top-0">
+              <div>
                 {this.renderItems()}
-              </ul>
-            </div>
-          </div>
+                </div>
+            
         </div>
         {this.state.modal ? (
           <Modal
