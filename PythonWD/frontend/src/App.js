@@ -102,8 +102,37 @@ class App extends Component {
 
     return( <Grid container spacing={3}> {newItems.map((item) => {
       return(
-        <>
-        <Grid size={8} style={{padding: "25px"}}>
+        <>{!viewLarge ?
+          <Grid size={8} style={{padding: "25px"}}>
+          <Card sx={{ width: 200 }}>
+        <CardMedia
+          image={item.image}
+          style={{width: 200, height: 200}}
+          title="card image"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="body" component="div">
+            <p><b>{item.name}</b></p>
+          </Typography>
+        </CardContent>
+        <CardActions>
+        <Button
+              className="btn btn-secondary mr-2" size="small"
+              onClick={() => this.editItem(item)}
+            >
+              Edit
+            </Button>
+            <Button
+              className="btn btn-danger"
+              onClick={() => this.handleDelete(item)}
+            >
+              Delete
+            </Button>
+        </CardActions>
+      </Card>
+      </Grid>
+    :
+    <Grid size={8} style={{padding: "25px"}}>
         <Card sx={{ width: 290 }}>
       <CardMedia
         sx={{ height: 345 }}
@@ -112,7 +141,7 @@ class App extends Component {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          <h1>{item.name}</h1>
+          <h2>{item.name}</h2>
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
           <p>{item.description}</p>
@@ -134,6 +163,8 @@ class App extends Component {
       </CardActions>
     </Card>
     </Grid>
+    
+    }
       </>)
   })}</Grid>);
   };
