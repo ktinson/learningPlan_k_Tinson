@@ -51,5 +51,6 @@
     ]
   },
   "devDependencies": {
+    "netlify-cli": "^17.37.1"
   }
 }
