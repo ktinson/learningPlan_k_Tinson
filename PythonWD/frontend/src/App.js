@@ -3,7 +3,7 @@ import Modal from "./components/Modal";
 import {Button, CardActions, Typography, CardContent, CardMedia, Card, Grid} from '@mui/material/';
 
 import axios from "axios";
-const apiURL = process.env.REACT_APP_API_URL || "http://localhost:8000" || "https://learningplan-k-tinson-main.onrender.com";
+const apiURL = process.env.REACT_APP_API_URL || "http://localhost:8000" || "https://learningplan-k-tinson.onrender.com";
 class App extends Component {
   constructor(props) {
     super(props);
