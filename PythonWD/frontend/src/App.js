@@ -30,6 +30,10 @@ class App extends Component {
       .get(`${apiURL}/api/cards/`)
       .then((res) => this.setState({ cardList: res.data }))
       .catch((err) => console.log(err));
+    console.log(apiURL, "apiurl this")
+    console.log(process.env.REACT_APP_API_URL, "REACT_APP_API_URL")
+
+    console.log(process.env.NODE_ENV, "NODE_ENV")
    
   };
 
