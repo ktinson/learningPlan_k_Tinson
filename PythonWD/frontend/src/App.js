@@ -3,7 +3,7 @@ import Modal from "./components/Modal";
 import {Button, CardActions, Typography, CardContent, CardMedia, Card, Grid} from '@mui/material/';
 
 import axios from "axios";
-
+const apiURL = process.env.REACT_APP_API_URL || "http://localhost:8000";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -27,7 +27,7 @@ class App extends Component {
   refreshList = () => {
     
     axios
-      .get("http://localhost:8000/api/cards/")
+      .get(`${apiURL}/api/cards/`)
       .then((res) => this.setState({ cardList: res.data }))
       .catch((err) => console.log(err));
    
@@ -42,18 +42,18 @@ class App extends Component {
 
     if (item.id) {
       axios
-        .put(`http://localhost:8000/api/cards/${item.id}/`, item)
+        .put(`${apiURL}/api/cards/${item.id}/`, item)
         .then((res) => this.refreshList());
       return;
     }
     axios
-      .post("http://localhost:8000/api/cards/", item)
+      .post(`${apiURL}/api/cards/`, item)
       .then((res) => this.refreshList());
   };
 
   handleDelete = (item) => {
     axios
-      .delete(`http://localhost:8000/api/cards/${item.id}/`)
+      .delete(`${apiURL}/api/cards/${item.id}/`)
       .then((res) => this.refreshList());
   };
 
