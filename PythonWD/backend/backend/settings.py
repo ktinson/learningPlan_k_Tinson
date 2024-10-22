@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-+_wm=lk2%a%#ej3x*5m(1isv#af)bxck3#kwojjuun@50zdjtg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS=['localhost', '127.0.0.1', '*', ]
+ALLOWED_HOSTS=['localhost', '127.0.0.1', '*', 'https://learningplan-k-tinson.onrender.com',
+     'https://learningplan-k-tinson-main.onrender.com', 'http://learningplan-k-tinson.onrender.com',
+     'http://learningplan-k-tinson-main.onrender.com']
 
 # Application definition
 
@@ -131,12 +133,17 @@ CORS_ORIGIN_WHITELIST = [
      'http://localhost:3000',
      'http://learningplan-k-tinson.onrender.com',
      'http://learningplan-k-tinson-main.onrender.com',
+     'https://learningplan-k-tinson.onrender.com',
+     'https://learningplan-k-tinson-main.onrender.com',
     #  'http://learningplan-k-tinson-frontend.onrender.com',
 ]
 CORS_ALLOWED_ORIGINS = [
 "http://127.0.0.1:8000",
 'http://localhost:3000',
 'http://learningplan-k-tinson.onrender.com',
+'https://learningplan-k-tinson.onrender.com',
 'http://learningplan-k-tinson-main.onrender.com',
+'https://learningplan-k-tinson-main.onrender.com',
 # 'http://learningplan-k-tinson-frontend.onrender.com',
 ]
+CORS_ALLOW_ALL_ORIGINS = True

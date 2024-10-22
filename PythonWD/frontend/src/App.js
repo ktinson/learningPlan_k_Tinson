@@ -28,7 +28,8 @@ class App extends Component {
   refreshList = () => {
     
     axios
-      .get(`${apiURL}/api/cards/`)
+      // .get(`${apiURL}/api/cards/`)
+      .get(`https://learningplan-k-tinson.onrender.com/api/cards/`)
       .then((res) => this.setState({ cardList: res.data }))
       .catch((err) => console.log(err));
     console.log(`${apiURL}/api/cards/`, `api url`)

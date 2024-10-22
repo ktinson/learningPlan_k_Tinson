@@ -4,9 +4,13 @@
   "private": true,
   "options": {
     "allowedHosts": [
-      "localhost"
+      "localhost",
+      "http://learningplan-k-tinson-main.onrender.com",
+      "https://learningplan-k-tinson-main.onrender.com",
+      "http://learningplan-k-tinson.onrender.com",
+      "https://learningplan-k-tinson.onrender.com"
     ],
-    "proxy": "http://localhost:8000"
+    "proxy": "https://learningplan-k-tinson.onrender.com"
   },
   "type": "module",
   "dependencies": {
