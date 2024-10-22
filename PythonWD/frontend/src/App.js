@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Modal from "./components/Modal";
+import Modal from "./components/Modal.js";
 import {Button, CardActions, Typography, CardContent, CardMedia, Card, Grid} from '@mui/material/';
-import apiURL from "./api";
+import apiURL from "./api.js";
 import axios from "axios";
 const PORT = process.env.PORT || 3000;
 
