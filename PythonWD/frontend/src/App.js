@@ -31,9 +31,9 @@ class App extends Component {
       .get(`${apiURL}/api/cards/`)
       .then((res) => this.setState({ cardList: res.data }))
       .catch((err) => console.log(err));
-    console.log(apiURL, "apiurl this")
+    console.log(`${apiURL}/api/cards/`, `api url`)
     console.log(process.env.REACT_APP_API_URL, "REACT_APP_API_URL")
-    console.log(process.env.PORT, `${apiURL}`)
+    console.log(process.env.PORT, `process env PORT`)
     console.log(process.env.NODE_ENV, "NODE_ENV")
    
   };
@@ -49,17 +49,22 @@ class App extends Component {
       axios
         .put(`${apiURL}/api/cards/${item.id}/`, item)
         .then((res) => this.refreshList());
+        console.log(`${apiURL}/api/cards/${item.id}/`, item)
+
       return;
     }
     axios
       .post(`${apiURL}/api/cards/`, item)
       .then((res) => this.refreshList());
+      console.log(`${apiURL}/api/cards/${item.id}/`, item)
+
   };
 
   handleDelete = (item) => {
     axios
       .delete(`${apiURL}/api/cards/${item.id}/`)
       .then((res) => this.refreshList());
+        console.log(`${apiURL}/api/cards/${item.id}/`, item)
   };
 
   createItem = () => {
