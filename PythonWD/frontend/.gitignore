@@ -36,4 +36,4 @@ dist
 .parcel-cache
 
 #sqlite
-
+*.sqlite3
