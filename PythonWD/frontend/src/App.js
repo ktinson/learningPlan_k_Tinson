@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import Modal from "./components/Modal";
 import {Button, CardActions, Typography, CardContent, CardMedia, Card, Grid} from '@mui/material/';
-
+import apiURL from "./api";
 import axios from "axios";
-const apiURL = process.env.REACT_APP_API_URL || "http://localhost:8000" || "https://learningplan-k-tinson.onrender.com";
+const PORT = process.env.PORT || 3000;
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -32,7 +33,7 @@ class App extends Component {
       .catch((err) => console.log(err));
     console.log(apiURL, "apiurl this")
     console.log(process.env.REACT_APP_API_URL, "REACT_APP_API_URL")
-
+    console.log(process.env.PORT, `${apiURL}`)
     console.log(process.env.NODE_ENV, "NODE_ENV")
    
   };
@@ -185,6 +186,7 @@ class App extends Component {
               </div>
               {this.renderTabList()}
               <div style={{padding: "50px"}}>
+                <p>{ `${apiURL}${PORT}`}</p>
                 {this.renderItems()}
                 </div>
             
