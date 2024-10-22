@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS=['localhost', '127.0.0.1', '*', 'https://learningplan-k-tinson.onrender.com',
      'https://learningplan-k-tinson-main.onrender.com', 'http://learningplan-k-tinson.onrender.com',
-     'http://learningplan-k-tinson-main.onrender.com']
+     'http://learningplan-k-tinson-main.onrender.com', 'https://learningplan-k-tinson-1.onrender.com']
 
 # Application definition
 
@@ -135,6 +135,7 @@ CORS_ORIGIN_WHITELIST = [
      'http://learningplan-k-tinson-main.onrender.com',
      'https://learningplan-k-tinson.onrender.com',
      'https://learningplan-k-tinson-main.onrender.com',
+     'https://learningplan-k-tinson-1.onrender.com',
     #  'http://learningplan-k-tinson-frontend.onrender.com',
 ]
 CORS_ALLOWED_ORIGINS = [
@@ -144,6 +145,7 @@ CORS_ALLOWED_ORIGINS = [
 'https://learningplan-k-tinson.onrender.com',
 'http://learningplan-k-tinson-main.onrender.com',
 'https://learningplan-k-tinson-main.onrender.com',
+'https://learningplan-k-tinson-1.onrender.com',
 # 'http://learningplan-k-tinson-frontend.onrender.com',
 ]
 CORS_ALLOW_ALL_ORIGINS = True
