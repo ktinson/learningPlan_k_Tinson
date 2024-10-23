@@ -90,9 +90,17 @@ DATABASES = {
         'USER': os.getenv('DB_USER'),
         'PASSWORD': os.getenv('DB_PASSWORD'),
         'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT')
+        'PORT': os.getenv('DB_PORT', '5432')
     }
+           
+
 }
+print(f'{os.getenv('DB_USER')}')
+print(f'{os.getenv('DB_NAME')}')
+print(f'{os.getenv('DB_PASSWORD')}')
+print(f'{os.getenv('DB_HOST')}')
+print(f'{os.getenv('DB_PORT')}')
+
 
 
 # Password validation
