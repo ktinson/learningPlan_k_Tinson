@@ -32,30 +32,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node --max-old-space-size=4096 && set PORT=3000 && node_modules/.bin/react-scripts start",
+    "start": "set PORT=3000 && node --max-old-space-size=8192 && node_modules/.bin/react-scripts start",
     "build": "node --max-old-space-size=4096 && set PORT=3000 && node_modules/.bin/react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "netlify-cli": "^17.37.1"
   }
 }
