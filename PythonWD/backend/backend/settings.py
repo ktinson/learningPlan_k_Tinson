@@ -95,11 +95,7 @@ DATABASES = {
            
 
 }
-print(f'{os.getenv('DB_USER')}')
-print(f'{os.getenv('DB_NAME')}')
-print(f'{os.getenv('DB_PASSWORD')}')
-print(f'{os.getenv('DB_HOST')}')
-print(f'{os.getenv('DB_PORT')}')
+
 
 
 
